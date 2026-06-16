@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Галактики — COSMOS</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stars-bg"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">★ COSMOS</a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-page="index">Главная</a></li>
+    <li><a href="planets.html" data-page="planets">Планеты</a></li>
+    <li><a href="blackholes.html" data-page="blackholes">Чёрные дыры</a></li>
+    <li><a href="satellites.html" data-page="satellites">Спутники</a></li>
+    <li><a href="galaxies.html" data-page="galaxies">Галактики</a></li>
+    <li><a href="planets3d.html" data-page="planets3d">3D Модели</a></li>
+    <li><a href="games.html" data-page="games">Игры</a></li>
+    <li><a href="facts.html" data-page="facts">Факты</a></li>
+    <li><button class="nav-fact-btn" id="navFactBtn" title="Случайный факт"><span class="dice">🎲</span> ФАКТ</button></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="section-label">Глубокий космос</div>
+  <h1 class="section-title" style="font-size:clamp(2rem,5vw,3.5rem)">ГАЛАКТИКИ</h1>
+  <p class="section-desc" style="margin:0 auto">От нашего Млечного Пути до гигантской IC 1101. Изучите 15 удивительных звёздных островов Вселенной.</p>
+</div>
+
+<section id="galaxies">
+  <div class="galaxies-stats">
+    <div class="galaxy-stat">
+      <div class="galaxy-stat-value" id="statTotal">15</div>
+      <div class="galaxy-stat-label">Галактик</div>
+    </div>
+    <div class="galaxy-stat">
+      <div class="galaxy-stat-value">5</div>
+      <div class="galaxy-stat-label">Типов</div>
+    </div>
+    <div class="galaxy-stat">
+      <div class="galaxy-stat-value">2.5M</div>
+      <div class="galaxy-stat-label">св.лет до Андромеды</div>
+    </div>
+    <div class="galaxy-stat">
+      <div class="galaxy-stat-value">13.8B</div>
+      <div class="galaxy-stat-label">лет возраст</div>
+    </div>
+  </div>
+
+  <div class="galaxies-filters">
+    <button class="filter-chip active" data-filter="all">Все</button>
+    <button class="filter-chip" data-filter="spiral">Спиральные</button>
+    <button class="filter-chip" data-filter="elliptical">Эллиптические</button>
+    <button class="filter-chip" data-filter="irregular">Неправильные</button>
+    <button class="filter-chip" data-filter="active">Активные</button>
+    <button class="filter-chip" data-filter="starburst">Вспышка звёзд</button>
+    <button class="filter-chip" data-filter="ring">Кольцевые</button>
+  </div>
+
+  <div class="galaxies-search-wrap">
+    <input type="text" class="galaxies-search" id="galaxiesSearch" placeholder="Поиск галактики...">
+    <button class="galaxies-search-btn" id="galaxiesSearchBtn">НАЙТИ</button>
+  </div>
+
+  <div class="galaxies-grid" id="galaxiesGrid"></div>
+</section>
+
+<footer>
+  <p>★ COSMOS &nbsp;|&nbsp; <a href="index.html">На главную</a> &nbsp;|&nbsp; <a href="satellites.html">← Спутники</a> &nbsp;|&nbsp; <a href="games.html">Игры →</a></p>
+</footer>
+
+<button class="scroll-top" id="scrollTop" title="Наверх">↑</button>
+
+<div class="modal" id="galaxyModal">
+  <div class="modal-content">
+    <button class="modal-close">×</button>
+    <img id="galaxyModalImage" src="" alt="">
+    <h2 id="galaxyModalTitle"></h2>
+    <p id="galaxyModalShort"></p>
+    <p class="modal-fact" id="galaxyModalDetails"></p>
+    <div class="modal-stats" id="galaxyModalStats"></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>КОСМОС — Путешествие во Вселенную</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stars-bg"></div>
+
+<nav>
+  <div class="nav-top">
+    <a href="index.html" class="nav-logo">★ COSMOS</a>
+    <button class="burger-menu" id="burgerMenu" aria-label="Меню">
+      <span class="burger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" data-page="index">Главная</a></li>
+    <li><a href="planets.html" data-page="planets">Планеты</a></li>
+    <li><a href="blackholes.html" data-page="blackholes">Чёрные дыры</a></li>
+    <li><a href="satellites.html" data-page="satellites">Спутники</a></li>
+    <li><a href="galaxies.html" data-page="galaxies">Галактики</a></li>
+    <li><a href="planets3d.html" data-page="planets3d">3D Модели</a></li>
+    <li><a href="games.html" data-page="games">Игры</a></li>
+    <li><a href="facts.html" data-page="facts">Факты</a></li>
+    <li><button class="nav-fact-btn" id="navFactBtn" title="Случайный факт"><span class="dice">🎲</span> ФАКТ</button></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <h1 class="hero-title">ВСЕЛЕННАЯ<br>БЕСКОНЕЧНА</h1>
+  <p class="hero-sub">Исследуй космос — от Солнечной системы до глубин галактик</p>
+  <a href="#solar" class="hero-btn"><span>▶ Начать путешествие</span></a>
+  <div class="hero-nav-cards">
+    <a href="planets.html" class="hero-nav-card">
+      <div class="hnc-icon">🪐</div>
+      <div class="hnc-title">ПЛАНЕТЫ</div>
+    </a>
+    <a href="blackholes.html" class="hero-nav-card">
+      <div class="hnc-icon">⚫</div>
+      <div class="hnc-title">ЧЁРНЫЕ ДЫРЫ</div>
+    </a>
+    <a href="satellites.html" class="hero-nav-card">
+      <div class="hnc-icon">🛰️</div>
+      <div class="hnc-title">СПУТНИКИ</div>
+    </a>
+    <a href="galaxies.html" class="hero-nav-card">
+      <div class="hnc-icon">🌌</div>
+      <div class="hnc-title">ГАЛАКТИКИ</div>
+    </a>
+    <a href="facts.html" class="hero-nav-card">
+      <div class="hnc-icon">⚖️</div>
+      <div class="hnc-title">КАЛЬКУЛЯТОР</div>
+    </a>
+    <a href="games.html" class="hero-nav-card">
+      <div class="hnc-icon">🎮</div>
+      <div class="hnc-title">ИГРЫ</div>
+    </a>
+  </div>
+</section>
+
+<section id="solar">
+  <div class="center">
+    <div class="section-label">Интерактивная модель</div>
+    <h2 class="section-title">Солнечная система</h2>
+    <p class="section-desc">Нажми на любую планету или <strong style="color:#FFD740">на Солнце</strong>, чтобы узнать о нём подробнее. Управляй скоростью и ставь на паузу.</p>
+  </div>
+  <div id="solar-canvas-wrap">
+    <canvas id="solarCanvas"></canvas>
+  </div>
+  <div class="planet-info-panel" id="planetInfo">
+    <h3>Нажми на Солнце или планету</h3>
+    <p>Щёлкни по любому небесному телу в анимации выше, чтобы увидеть информацию о нём. <strong style="color:#FFD740">Солнце тоже кликабельно!</strong></p>
+  </div>
+  <div class="speed-controls">
+    <label>СКОРОСТЬ</label>
+    <input type="range" id="speedRange" min="0.1" max="5" step="0.1" value="1">
+    <span class="speed-val" id="speedVal">1.0×</span>
+    <button class="pause-btn" id="pauseBtn">❚❚ ПАУЗА</button>
+  </div>
+</section>
+
+
+<section id="planets">
+  <div class="center">
+    <div class="section-label">Энциклопедия Солнечной системы</div>
+    <h2 class="section-title">Центр и планеты</h2>
+    <p class="section-desc">Изучите наше Солнце — источник жизни, и 8 уникальных планет, вращающихся вокруг него.</p>
+  </div>
+
+  <div class="sun-hero-card">
+    <div class="sun-hero-visual"></div>
+    <div class="sun-hero-content">
+      <div class="sun-badge">⭐ ЦЕНТР СОЛНЕЧНОЙ СИСТЕМЫ</div>
+      <h2 class="sun-hero-title">СОЛНЦЕ</h2>
+      <p class="sun-hero-desc">Жёлтый карлик класса G2V, источник всей жизни на Земле. Занимает 99.86% массы всей Солнечной системы и каждую секунду превращает 600 миллионов тонн водорода в гелий.</p>
+      
+      <div class="sun-hero-stats">
+        <div class="sun-stat-item">
+          <div class="sun-stat-label">Диаметр</div>
+          <div class="sun-stat-value">1 392 000 км</div>
+        </div>
+        <div class="sun-stat-item">
+          <div class="sun-stat-label">Масса</div>
+          <div class="sun-stat-value">1.989 × 10³⁰ кг</div>
+        </div>
+        <div class="sun-stat-item">
+          <div class="sun-stat-label">Температура поверхности</div>
+          <div class="sun-stat-value">5 500°C</div>
+        </div>
+        <div class="sun-stat-item">
+          <div class="sun-stat-label">Возраст</div>
+          <div class="sun-stat-value">4.6 млрд лет</div>
+        </div>
+      </div>
+
+      <div class="sun-hero-actions">
+        <button type="button" class="sun-btn primary" id="sunModalBtn">
+          <span>📖</span> ПОДРОБНАЯ ИНФОРМАЦИЯ
+        </button>
+        <button type="button" class="sun-btn secondary" id="scrollToMapBtn">
+          <span>🗺️</span> ПОКАЗАТЬ НА КАРТЕ
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider">
+    <span>ПЛАНЕТЫ СОЛНЕЧНОЙ СИСТЕМЫ</span>
+  </div>
+
+  <div class="planets-grid" id="planetsGrid"></div>
+</section>
+
+<section id="map-section">
+  <div class="center">
+    <div class="section-label">Интерактивная карта</div>
+    <h2 class="section-title">Карта Солнечной системы</h2>
+    <p class="section-desc">Масштабное соотношение расстояний. <strong style="color:var(--accent-gold)">Кликни на Солнце или любую планету</strong>, чтобы увидеть подробности. <strong style="color:var(--accent-gold)">Колесо мыши</strong> — приближение, перетаскивание — навигация.</p>
+  </div>
+  <div class="map-wrap">
+    <div class="map-canvas-row">
+      <canvas id="mapCanvas" height="350"></canvas>
+      <div class="map-tooltip" id="mapTooltip"></div>
+    </div>
+  </div>
+  <div class="map-info-panel" id="mapInfoPanel">
+    <h3>Кликните на объект</h3>
+    <p>Выберите Солнце или любую планету на карте, чтобы увидеть подробную информацию. Используйте колесо мыши для зума.</p>
+  </div>
+</section>
+
+<footer>
+  <p>★ COSMOS — Путешествие во Вселенную &nbsp;|&nbsp; <a href="planets.html">Планеты</a> &nbsp;|&nbsp; <a href="galaxies.html">Галактики</a> &nbsp;|&nbsp; <a href="facts.html">Факты</a></p>
+</footer>
+
+<button class="scroll-top" id="scrollTop" title="Наверх">↑</button>
+
+<div class="modal" id="planetModal">
+  <div class="modal-content">
+    <button class="modal-close" type="button">×</button>
+    <img id="modalImage" src="" alt="">
+    <h2 id="modalTitle"></h2>
+    <p id="modalDesc"></p>
+    <p class="modal-fact" id="modalFact"></p>
+    <div class="modal-stats" id="modalStats"></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
